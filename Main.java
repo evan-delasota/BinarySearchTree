@@ -14,5 +14,8 @@ class Main {
     bst.delete(50);
 
     bst.levelOrderDisplay();
+    bst.preOrderDisplay();
+    bst.inOrderDisplay();
+    bst.postOrderDisplay();
   }
 }

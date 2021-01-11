@@ -59,6 +59,64 @@ class Tree {
 
   }
 
+  void preOrder(Node root) {
+    if (root == null) {
+      return;
+    }
+
+    System.out.print(root.value + " ");
+
+    preOrder(root.left);
+
+    preOrder(root.right);
+
+  }
+
+  public void preOrderDisplay() {
+    System.out.println("Pre-order tree display: ");
+    preOrder(root);
+    System.out.println();
+
+  }
+
+  void inOrder(Node root) {
+    if (root == null) {
+      return;
+    }
+
+    inOrder(root.left);
+
+    System.out.print(root.value + " ");
+
+    inOrder(root.right);
+
+  }
+
+  public void inOrderDisplay() {
+    System.out.println("In-order tree display: ");
+    inOrder(root);
+    System.out.println();
+
+  }
+
+  void postOrder(Node root) {
+    if (root == null) {
+      return;
+    }
+
+    postOrder(root.left);
+
+    postOrder(root.right);
+
+    System.out.print(root.value + " ");
+  } 
+
+  public void postOrderDisplay() {
+    System.out.println("Post-order tree display: ");
+    postOrder(root);
+    System.out.println();
+  }
+
   public Node search(Node root, int value) {
     if (root == null || root.value == value) {
       return root;
