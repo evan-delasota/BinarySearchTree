@@ -40,7 +40,7 @@ class Tree {
     }
 
     if (level == 1) {
-      System.out.println(root.value + " ");
+      System.out.print(root.value + " ");
     } else {
       printLevel(root.left, level - 1);
       printLevel(root.right, level - 1);
@@ -50,7 +50,7 @@ class Tree {
   // Level-order tree display
   void levelOrderDisplay() {
     int treeHeight = height(root);
-    System.out.println("Level order tree display: ");
+    System.out.println("\nLevel order tree display: ");
 
     for (int i = 0; i <= treeHeight; ++i) {
       printLevel(root, i);
@@ -73,7 +73,7 @@ class Tree {
   }
 
   public void preOrderDisplay() {
-    System.out.println("Pre-order tree display: ");
+    System.out.println("\nPre-order tree display: ");
     preOrder(root);
     System.out.println();
 
@@ -93,7 +93,7 @@ class Tree {
   }
 
   public void inOrderDisplay() {
-    System.out.println("In-order tree display: ");
+    System.out.println("\nIn-order tree display: ");
     inOrder(root);
     System.out.println();
 
@@ -112,7 +112,7 @@ class Tree {
   } 
 
   public void postOrderDisplay() {
-    System.out.println("Post-order tree display: ");
+    System.out.println("\nPost-order tree display: ");
     postOrder(root);
     System.out.println();
   }
@@ -130,6 +130,7 @@ class Tree {
   }
 
   public void insert(int value) {
+    System.out.println("\nInserting " + value);
     root = insertRecursively(root, value);
   }
 
@@ -149,6 +150,7 @@ class Tree {
   }
 
   void delete(int value) {
+    System.out.println("\nDeleting " + value);
     root = deleteRecursively(root, value);
   }
 
