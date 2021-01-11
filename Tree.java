@@ -16,6 +16,7 @@ class Tree {
 
   Tree() {
     root = null;
+    
   }
 
   int height(Node root) {
@@ -32,6 +33,10 @@ class Tree {
       }
 
     }
+  }
+
+  void displayHeight() {
+    System.out.println("\nTree height: " + height(root));
   }
   // Outputs the values of each node for every level of the tree
   void printLevel(Node root, int level) {
